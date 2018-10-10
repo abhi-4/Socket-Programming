@@ -1,6 +1,5 @@
-# Socket-Programming
+                        Point-of-Sale Terminal using socket programming
 
-Point-of-Sale Terminal using socket programming
 Use socket programming to implement a simple client and server that communicate over the network and
 implement a simple application involving Cash Registers. The client implements a simple cash register
 that opens a session with the server and then supplies a sequence of codes (refer request-response
@@ -10,10 +9,11 @@ session, the server returns the total cost. This is how the point-of-sale termin
 a TXT file as a database to store the UPC code and item description at the server end.
 You also require implementing a "Concurrent Server", i.e., a server that accepts connections from
 multiple clients and serves all of them concurrently.
+
 Request-response messages format
-Request_ Type
-UPC-Code
-Number
+
+    Request_ Type | UPC-Code | Number
+
 Where
 • Request_Type is either 0 for item or 1 for close.
 • UPC-code is a 3-digit unique product code; this field is meaningful only if the Request_Type is 0.
@@ -27,6 +27,7 @@ Where:
  If OK, then <Response> is as follows:
 o if client command was "close", then <response> contains the total amount
 o if client command was "item", then <response> is of the form <price><name>
+  
 where
 <price> is the price of the requested item
 <name> is the name of the requested item
